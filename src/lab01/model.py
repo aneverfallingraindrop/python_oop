@@ -78,20 +78,16 @@ class Student:
         self.course = new_course
 
     def unittest_update_name(self, new_name: str) -> None:
-        validate_name_setter(new_name)
-        self.personal_info[0] = new_name
+        self.update_name = new_name
     
     def unittest_update_age(self, new_age: int) -> None:
-        validate_age_setter(self, new_age)
-        self.personal_info[1] = new_age
+        self.update_age = new_age
     
     def unittest_update_group(self, new_group: str) -> None:
-        validate_group_setter(self, new_group)
-        self.personal_info[2] = new_group
+        self.update_group = new_group
 
     def unittest_update_course(self, new_course: int) -> None:
-        validate_course_setter(self, new_course)
-        self.course = new_course
+        self.update_course = new_course
 
     def __repr__(self):
         return (f"Student(name='{self.personal_info[0]}', age={self.personal_info[1]}, "
