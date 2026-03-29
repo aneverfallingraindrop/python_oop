@@ -92,7 +92,7 @@ except AttributeError as e:
     print(f"caught grading inactive: {e}")
 
 andrew.activate()
-andrew.update_group('BIVT-25-8')
+andrew.update_group = 'BIVT-25-8'
 
 print("SICK LEAVE SYSTEM")
 
@@ -132,7 +132,7 @@ except AttributeError as e:
     print(f"caught inactive student: {e}")
 
 andrew.activate()
-andrew.update_group("BIVT-25-8")
+andrew.update_group = "BIVT-25-8"
 
 print("ACTIVITY MANAGER")
 
@@ -152,7 +152,7 @@ except AttributeError as e:
     print(f"caught grading inactive: {e}")
 
 try:
-    andrew.update_group("woag,h.")
+    andrew.update_group = "woag,h."
     print("expected raise AttributeError for updating inactive")
 except AttributeError as e:
     print(f"caught update inactive: {e}")
@@ -166,7 +166,7 @@ except AttributeError as e:
 # Reactivate
 print("\n  Reactivating Andrew")
 andrew.activate()
-andrew.update_group("BIVT-25-8")
+andrew.update_group = "BIVT-25-8"
 print(f"Reactivated: {andrew.active}")
 
 print("INFOMANAGER")
@@ -174,45 +174,45 @@ print("INFOMANAGER")
 print(f"Current info: Name='{andrew.student_name}', Age={andrew.student_name}, Group='{andrew.student_name}'")
 
 print("\n  Updating name")
-andrew.update_name("Sire Andrew the Fourth")
+andrew.update_name = "Sire Andrew the Fourth"
 print(f"Name updated: '{andrew.student_name}'")
 
 try:
-    andrew.update_name("")
+    andrew.update_name = ""
     print("expected raise ValueError for empty name")
 except ValueError as e:
     print(f"caught empty name update: {e}")
 
 print("\n  Updating age")
-andrew.update_age(19)
+andrew.update_age = 19
 print(f"Age updated: {andrew.student_age}")
 
 try:
-    andrew.update_age(17) 
+    andrew.update_age = 17
     print("expected raise ValueError for decreasing age")
 except ValueError as e:
     print(f"caught age decrease: {e}")
 
 try:
-    andrew.update_age(5)
+    andrew.update_age = 5
     print("expected raise ValueError for age < 6!")
 except ValueError as e:
     print(f"caught underage update: {e}")
 
 try:
-    andrew.update_age(1005)  
+    andrew.update_age = 1005
     print("expected raise ValueError for age > 100!")
 except ValueError as e:
     print(f"caught overage update: {e}")
 
 # Update group
 print("\n  Updating group")
-andrew.update_group("BIVT-25-10")
+andrew.update_group = "BIVT-25-10"
 print(f"group updated: '{andrew.student_group}'")
 
 # Invalid group
 try:
-    andrew.update_group("")
+    andrew.update_group = ""
     print("expected raise ValueError for empty group")
 except ValueError as e:
     print(f"caught empty group update: {e}")
@@ -263,10 +263,10 @@ david.grade(4)
 david.grade(5)
 print(f"received gpa: {david.student_gpa}")
 
-david.update_group("BIVT-21-16")
+david.update_group = "BIVT-21-16"
 print(f"changed to: {david.student_group}")
 
-david.update_age(29)
+david.update_age = 29
 print(f"Grew older. Now {david.student_age}")
 
 # Take academic leave
@@ -275,7 +275,7 @@ print(f"On academic leave: active={david.active}")
 
 # Return from academic leave
 david.activate()
-david.update_group("BIVT-22-16")
+david.update_group = "BIVT-22-16"
 david.add_sick_leave(date(2026, 1, 6), date(2026, 1, 19))
 print(f"Returned! New group: {david.student_group}")
 
