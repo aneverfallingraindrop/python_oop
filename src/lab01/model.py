@@ -1,5 +1,14 @@
+import sys
+import os
+from pathlib import Path
+
+project_root = os.path.dirname(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+)
+sys.path.insert(0, project_root)
+
 from datetime import date 
-from validate import *
+from src.lab01.validate import *
 class Student: 
     course: int
     personal_info: list  # [name: str, age: int, group: str]

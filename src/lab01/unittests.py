@@ -1,4 +1,13 @@
-from model import Student
+import sys
+import os
+from pathlib import Path
+
+project_root = os.path.dirname(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+)
+sys.path.insert(0, project_root)
+
+from src.lab01.model import Student
 from datetime import date
 
 class StudentValidation:
