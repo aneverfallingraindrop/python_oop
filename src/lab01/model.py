@@ -16,6 +16,7 @@ class Student:
     active: bool
     sick_leave_log: list
     _grades: list
+    _scholarship: bool
 
     def __init__(self, name: str, age: int, group: str, course: int):
         validate_init(name, age, group, course)
@@ -25,6 +26,7 @@ class Student:
         self.active = True
         self.sick_leave_log = []
         self._grades = []
+        self._scholarship = False
     
     def grade(self, grade: int) -> None:
         validate_grade(self, grade)
@@ -42,6 +44,19 @@ class Student:
         self.personal_info[2] = '' #removing group once inactive
         self.active = False
 
+    def upgrade_course(self) -> None:
+        if self.student_course >= 6:
+            raise Exception("time 2 graduate")
+        self.update_course += 1  
+    
+    def grant_scholarship(self):
+        if not self.active:
+            return "Student inactive"
+        if self.student_gpa > 4.0: 
+            self._scholarship = True
+            return("Granted!")
+        else: return f"GPA has to be over 4.0 (currently {self.student_gpa})"
+    
     @property    
     def student_name(self) -> str:
         return self.personal_info[0]
