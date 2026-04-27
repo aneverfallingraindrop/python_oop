@@ -52,7 +52,7 @@ def demo():
     try:
         bachelor_4.upgrade_course()
     except Exception as e:
-        print(f"  Ошибка: {e}")
+        print(f"  Error: {e}")
 
     print_separator("5. mixed StudentGroup")
     
@@ -101,7 +101,7 @@ def demo():
     test_phd = PhDStudent("house", 45, 'hopital', 3, "Medicine", 3)
 
     test_bachelor.grade(4)
-    test_bachelor.grade(3)
+    test_bachelor.grade(5)
     test_master.grade(4)
     test_master.grade(5)
     test_phd.grade(4)
