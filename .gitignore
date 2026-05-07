@@ -7,5 +7,19 @@
 # scripts
 _scripts/__pycache__
 
+kr.py
+
 src/lab01/__pycache__
 src/lab01/test.py
+
+src/lab02/__pycache__
+src/lab02/test.py
+
+src/lab03/__pycache__
+src/lab03/test.py
+
+src/lab04/__pycache__
+src/lab04/test.py
+
+src/lab05/__pycache__
+src/lab05/test.py
