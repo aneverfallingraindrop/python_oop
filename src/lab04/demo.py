@@ -74,7 +74,7 @@ def scenario_3():
         if isinstance(item, Printable):
             printable_coll.add(item)
     
-    print("\Only Printable:")
+    print("\nOnly Printable:")
     print(printable_coll)
 
     print("\nSorting via GPA (Comparable):")
