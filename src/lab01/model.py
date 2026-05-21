@@ -18,11 +18,11 @@ class Student:
     _grades: list
     _scholarship: bool
 
-    def __init__(self, name: str, age: int, group: str, course: int):
+    def __init__(self, name: str, age: int, group: str, course: int, gpa = 0.0):
         validate_init(name, age, group, course)
         self.personal_info = [name, age, group]
         self.course = course
-        self.gpa = 0
+        self.gpa = gpa
         self.active = True
         self.sick_leave_log = []
         self._grades = []

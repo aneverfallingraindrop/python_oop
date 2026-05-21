@@ -12,8 +12,8 @@ from src.lab02.collection import *
 
 class BachelorStudent(Student):
     
-    def __init__(self, name, age, group, course, specialty, has_practice=False):
-        super().__init__(name, age, group, course)
+    def __init__(self, name, age, group, course, specialty, has_practice=False, gpa=0.0):
+        super().__init__(name, age, group, course, gpa)
         self._specialty = specialty
         self._has_practice = has_practice
     
@@ -45,12 +45,15 @@ class BachelorStudent(Student):
                 f"  Specialty: {self._specialty}\n"
                 f"  Practice: {practice_status}\n"
                 f"  Scholarship: {self._scholarship}")
+    
+    def score(self):
+        return self.gpa
 
 
 class MasterStudent(Student):
     
-    def __init__(self, name, age, group, course, research, thesis=False, scholarship = False):
-        super().__init__(name, age, group, course)
+    def __init__(self, name, age, group, course, research, thesis=False, scholarship = False, gpa = 0.0):
+        super().__init__(name, age, group, course, gpa)
         self._research_topic = research
         self._thesis = thesis
         self._scholarship = scholarship
@@ -87,10 +90,13 @@ class MasterStudent(Student):
                 f"  Thesis: {thesis_status}\n"
                 f"  Scholarship: {thesis_status}")
 
+    def score(self):
+        return self.gpa
+
 
 class PhDStudent(Student):
-    def __init__(self, name, age, group, course, research, publications=0, scholarship = False):
-        super().__init__(name, age, group, course)
+    def __init__(self, name, age, group, course, research, publications=0, scholarship = False, gpa = 0.0):
+        super().__init__(name, age, group, course, gpa)
         self._research = research
         self._publications = publications
         self._scholarship = scholarship
@@ -121,3 +127,6 @@ class PhDStudent(Student):
                 f"  Research area: {self._research}\n"
                 f"  Times published: {self._publications}\n"
                 f"  Scholarship: {self._scholarship}")
+    
+    def score(self):
+        return self.gpa
