@@ -19,7 +19,6 @@ StudentType = Student | BachelorStudent | MasterStudent | PhDStudent
 
 
 def save(collection: StudentGroup, filepath: str) -> None:
-    """Save a student collection into a JSON file."""
     payload = {
         "group_name": collection.name,
         "students": [_student_to_dict(student) for student in collection.get_all()],
@@ -36,7 +35,6 @@ def save(collection: StudentGroup, filepath: str) -> None:
 
 
 def load(filepath: str, default_group_name: str) -> StudentGroup:
-    """Load a student collection from a JSON file."""
     if not os.path.exists(filepath):
         return StudentGroup(default_group_name)
 
