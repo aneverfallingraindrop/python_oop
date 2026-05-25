@@ -1,0 +1,36 @@
+{
+  "group_name": "BIVT-25-8",
+  "students": [
+    {
+      "type": "MasterStudent",
+      "name": "testthree",
+      "age": 17,
+      "group": "BIVT-25-8",
+      "course": 3,
+      "gpa": 3.0,
+      "active": true,
+      "research_topic": "testthree",
+      "has_thesis": true
+    },
+    {
+      "type": "Student",
+      "name": "testone",
+      "age": 15,
+      "group": "BIVT-25-8",
+      "course": 1,
+      "gpa": 4.0,
+      "active": true
+    },
+    {
+      "type": "BachelorStudent",
+      "name": "testtwo",
+      "age": 16,
+      "group": "BIVT-25-8",
+      "course": 2,
+      "gpa": 5.0,
+      "active": true,
+      "specialization": "testtwo",
+      "has_practice": true
+    }
+  ]
+}
